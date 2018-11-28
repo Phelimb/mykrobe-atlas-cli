@@ -4,5 +4,6 @@ WORKDIR /usr/src/app
 RUN pip install --upgrade pip
 COPY . /usr/src/app
 RUN pip install -r requirements.txt 
+RUN pip install -r src/api/requirements.txt 
 RUN python setup.py install
 CMD mykrobe --help
